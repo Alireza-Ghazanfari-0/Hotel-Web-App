@@ -6,7 +6,8 @@ import toast from "react-hot-toast";
 
 const BookmarkContext = createContext();
 function BookmarkProvider({ children }) {
-  const baseUrl = "http://localhost:8000/bookmarks";
+  // const baseUrl = "http://localhost:8000/bookmarks";
+  const baseUrl = "https://json-server-repo-for-hotel-app.onrender.com";
   // const { isLoading, data: bookmarksData } = useFetch(baseUrl);
   const [bookmarksData, setBookmarksData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
