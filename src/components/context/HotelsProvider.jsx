@@ -7,7 +7,8 @@ import toast from "react-hot-toast";
 const HotelContext = createContext();
 
 function HotelsProvider({ children }) {
-  const baseURL = "http://localhost:8000/hotels";
+  // const baseURL = "http://localhost:8000/hotels";
+  const baseURL = "https://json-server-repo-for-hotel-app.onrender.com/hotels";
   const [currentHotel, setCurrentHotel] = useState("");
   const [isLoadingCurrent, setIsLoadingCurrent] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
