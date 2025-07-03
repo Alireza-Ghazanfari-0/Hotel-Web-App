@@ -5,7 +5,7 @@ import { Toaster } from "react-hot-toast";
 import HomeBody from "./components/HomeBody";
 import { Route, Routes } from "react-router-dom";
 import AppLayout from "./components/AppLayout";
-import SearchedHotelList from "./components/searchedHotelList";
+import SearchedHotelList from "./components/SearchedHotelList";
 import HotelsProvider from "./components/context/HotelsProvider";
 import SingleHotel from "./components/SingleHotel";
 import BookmarkLayout from "./components/BookmarkLayout";
