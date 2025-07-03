@@ -1,53 +1,71 @@
-
 # 🌍 Hotel Web App | جستجوی هتل روی نقشه و ذخیره‌سازی
 
-یک وب‌اپلیکیشن مدرن برای جستجوی هتل، مشاهده روی نقشه و ذخیره مکان‌ها با React و نقشه Leaflet.
+A modern hotel search app with interactive map and bookmarking, built with React and Leaflet.  
+یک اپلیکیشن مدرن جستجوی هتل با نقشه تعاملی و امکان بوکمارک، ساخته شده با React و Leaflet.
+
+---
 
 ## 🔥 Features | ویژگی‌ها
 
-✅ جستجوی هتل بر اساس شهر یا کشور  
-✅ انتخاب تاریخ سفر، تعداد بزرگسال، کودک و اتاق  
-✅ ذخیره مکان‌های دلخواه در بخش Bookmark  
-✅ نمایش هم‌زمان نتایج روی نقشه و لیست  
-✅ افزودن مکان ناشناخته روی نقشه و ذخیره در Bookmark  
-✅ ورود کاربر با مشخصات از پیش تعیین شده (Alireza@yahoo.com / 123456)  
-✅ محافظت از صفحات با Route های خصوصی  
-✅ کاملاً واکنش‌گرا (Responsive)
+- Search hotels by city or country  
+  جستجوی هتل بر اساس شهر یا کشور  
+- Select journey date, number of adults, children, and rooms  
+  انتخاب تاریخ سفر، تعداد بزرگسالان، کودکان و اتاق‌ها  
+- Bookmark favorite places  
+  ذخیره مکان‌های دلخواه  
+- Show search results as list and on map  
+  نمایش نتایج جستجو به صورت لیست و روی نقشه  
+- Add unknown places by clicking on map and saving name & country  
+  افزودن مکان‌های ناشناخته با کلیک روی نقشه و وارد کردن نام و کشور  
+- Login with predefined user (Alireza@yahoo.com / 123456)  
+  ورود با کاربر از پیش تعیین شده (Alireza@yahoo.com / 123456)  
+- Protected routes for secure access  
+  استفاده از مسیرهای محافظت شده برای دسترسی امن  
+- Fully responsive design  
+  طراحی کاملاً واکنش‌گرا
+
+---
 
 ## 🚀 Tech Stack | تکنولوژی‌ها
 
-- React, HTML, CSS, JS  
-- Leaflet (نقشه)  
-- Axios (درخواست‌های API)  
-- React Router + Protected Routes  
-- Context API & Custom Hooks  
-- React Hot Toast (اعلان‌ها)  
-- Date-fns (مدیریت تاریخ)  
-- React Icons  
-- useSearchParams, useNavigate, useParams  
-- Loader Components & Multipage Structure  
+React, HTML, CSS, JavaScript, Leaflet, Axios, React Router, Context API, Custom Hooks, React Hot Toast, date-fns, React Icons, useSearchParams, useNavigate, useParams  
+ری‌اکت، اچ‌تی‌ام‌ال، سی‌اس‌اس، جاوااسکریپت، لیفلت، آکسیوس، ری‌اکت روتِر، کانتکست API، هوک‌های اختصاصی، ری‌اکت هات توست، دیت-اف‌ان‌اس، ری‌اکت آیکون‌ها، یوزسرچ‌پارامز، یوزنِویگیت، یوزپَرامز
+
+---
 
 ## 🌐 Deployment | استقرار پروژه
 
-**Front-End:**  
-Netlify → https://hotel-web-app.netlify.app  
+**Frontend:**  
+Netlify → [https://hotel-web-app.netlify.app](https://hotel-web-app.netlify.app)  
+فرانت‌اند: نتلیفای
 
-**Back-End (Mock API - json-server):**  
-Render.com → https://json-server-repo-for-hotel-app.onrender.com  
+**Backend (Mock API - json-server):**  
+Render.com → [https://json-server-repo-for-hotel-app.onrender.com](https://json-server-repo-for-hotel-app.onrender.com)  
+بک‌اند (سرور شبیه‌سازی شده): رندر
 
 **Backend Repo:**  
-https://github.com/Alireza-Ghazanfari-0/Json-server-repo-for-hotel-app  
+[https://github.com/Alireza-Ghazanfari-0/Json-server-repo-for-hotel-app](https://github.com/Alireza-Ghazanfari-0/Json-server-repo-for-hotel-app)  
+مخزن بک‌اند
 
-## ⚙️ Important Notes
+---
 
-- اطلاعات کاربر تست:  
+## ⚙️ Important Notes | نکات مهم
+
+- Test user credentials:  
   Username: `Alireza@yahoo.com`  
   Password: `123456`  
+- مشخصات کاربر تست:
 
-- افزودن مکان ناشناخته روی نقشه با کلیک و وارد کردن نام و کشور  
-- بخش Bookmark برای ذخیره سریع مکان‌های دلخواه  
+- Add unknown places by clicking on the map and entering details  
+  افزودن مکان‌های ناشناخته با کلیک روی نقشه و وارد کردن اطلاعات  
+- Bookmark feature to save favorite locations  
+  امکان بوکمارک کردن مکان‌های دلخواه
+
+---
 
 ## 📁 Project Structure | ساختار پروژه
+
+
 
 src/
 ├── components/   // کامپوننت‌ها  
@@ -61,3 +79,4 @@ src/
 این پروژه با هدف آموزشی و نمونه‌سازی ساخته شده است. API فقط برای مقاصد Frontend و تست کاربرد دارد.
 
 👨‍💻 Made with ❤️ by Alireza Ghazanfari
+alireza.ghazanfari@yahoo.com
