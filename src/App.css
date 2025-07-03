@@ -1,0 +1,446 @@
+@import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
+
+.header {
+  /* border: 1px solid white; */
+  /* border-radius: 10px; */
+  background-color: rgba(255, 68, 0, 0.938);
+  width: 100%;
+  height: 70px;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sub-header {
+  border: 2px solid rgba(49, 194, 36, 0.452);
+  border-radius: 30px;
+  background-color: antiquewhite;
+  padding: 2px;
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 62%;
+  height: 70%;
+}
+/* .sub-header :nth-child(2) {
+  flex-grow: 1;
+}
+.sub-header :nth-child(4){
+  flex-grow: 0;
+  flex-shrink: 0;
+} */
+
+.location-marker {
+  color: red;
+  height: 20px;
+}
+
+.search-input {
+  margin-left: 5px;
+  border: none;
+  background-color: inherit;
+  height: 25px;
+  /* width: 100%; */
+}
+.search-input:focus {
+  border: none;
+  outline: none;
+}
+
+.search_icon {
+  padding: 5px;
+  background-color: rgba(159, 197, 231, 0.788);
+  border: none;
+  border-radius: 9px;
+}
+/* .search_icon:hover{
+  background-color: rgba(30, 191, 212, 0.801);
+} */
+.search_icon_inner {
+  height: 1.7rem;
+  width: 1.7rem;
+  margin-bottom: -5px;
+}
+.search_icon_inner:hover {
+  color: rgb(226, 43, 43);
+}
+.seperator {
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  background-color: black;
+}
+
+.date-range {
+  /* margin-top:500px ; */
+  position: absolute;
+  top: 60px;
+  left: 27%;
+
+  /* z-index: 1002; */
+}
+.date-pick:hover {
+  cursor: pointer;
+}
+
+.condition-pick:hover {
+  cursor: pointer;
+}
+
+.condition-window {
+  background-color: rgb(255, 235, 235);
+  color: rgba(240, 80, 21, 0.938);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* border: 1px solid rgb(95, 72, 76) ; */
+  border-radius: 5px;
+
+  position: absolute;
+  top: 60px;
+  height: 100px;
+  width: 180px;
+  display: grid;
+  /* grid-template-rows: repeat(3, 1fr); */
+  /* align-items: center; */
+  padding-top: 5px;
+  font-weight: bold;
+}
+.option-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.option-item div:first-child {
+  justify-self: start;
+  padding-left: 10px;
+}
+.sign {
+  cursor: pointer;
+  margin-bottom: -4px;
+  height: 18px;
+  width: 18px;
+}
+.home-subject {
+  padding-top: 1.5rem;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: larger;
+}
+
+.single-item {
+  max-width: 380px;
+  height: 340px;
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 2.5rem;
+  flex: 1 1 380px;
+
+  /* justify-items: start; */
+}
+.img-single {
+  width: 370px;
+  height: 300px;
+  padding-bottom: 5px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.home-body-container {
+  padding-top: 2.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  display: flex;
+  flex-wrap: wrap; /* برای رفتن به سطر بعدی */
+  justify-content: space-between;
+  /* gap: 1rem; */
+}
+.home-button {
+  color: black;
+  font-size: large;
+  font-weight: bold;
+  /* border: 1px solid whitesmoke; */
+  /* border-radius: 5px; */
+  padding: 3px;
+  text-decoration: none;
+}
+.home-button:hover {
+  color: rgba(52, 115, 121, 0.932);
+}
+.app-layout {
+  display: flex;
+  height: calc(100vh - 70px);
+}
+.app-layout .childd {
+  flex: 1;
+  /* border: 1px solid wheat; */
+  position: relative;
+}
+.app-layout .child-app-1 {
+  overflow-y: scroll;
+}
+/* .app-layout .child-app-2 { */
+/* height: 100%; */
+/* position: relative; */
+/* overflow: hidden; */
+/* height: calc(100vh - 70px); */
+/* margin: 1rem; */
+/* width: 5%; */
+/* width: 5vw; */
+/* } */
+.map {
+  width: 100%;
+  height: 100%;
+  position: absolute; /* پر کردن کامل کانتینر */
+  top: 0;
+  left: 0;
+}
+
+.searched-hotel-list {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+.single-hotel-div-in-searched-list {
+  margin-top: 10px;
+  /* border: 1px solid wheat; */
+  height: 100px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  width: 45vw;
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.single-hotel-div-in-searched-list .child-1 {
+  grid-column: 1; /* قرار گرفتن در ستون اول */
+  grid-row: 1 / 4; /* پوشش تمام سطرهای ستون اول */
+  height: 90%;
+  width: 90%;
+  /* width: 90%; */
+  /* border: 1px solid brown; */
+  border-radius: 10px;
+  /* padding-left: 1rem; */
+  margin-left: 1rem;
+}
+.single-hotel-div-in-searched-list .child-2 {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: start;
+  padding-top: 10px;
+  padding-left: 1rem;
+}
+.single-hotel-div-in-searched-list .child-3 {
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: start;
+  opacity: 50%;
+  padding-left: 1rem;
+}
+.single-hotel-div-in-searched-list .child-4 {
+  grid-column: 2;
+  grid-row: 3;
+  justify-self: start;
+  padding-left: 1rem;
+}
+
+.single-hotel-page {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+.single-hotel-page .image {
+  border-radius: 10px;
+  width: 40vw;
+  max-height: 55vh; /* کنترل حداکثر ارتفاع */
+
+  margin-top: 0.5rem;
+  /* padding-left: 0.5rem; */
+}
+.single-hotel-page .single-child-1 {
+  padding-left: 1.5rem;
+  font-size: large;
+}
+.single-hotel-page .single-child-2 {
+  padding-left: 1.5rem;
+  opacity: 0.6;
+}
+.single-hotel-page .single-child-3 {
+  text-align: justify;
+  padding-top: 0.5rem;
+  padding-right: 2rem;
+  color: bisque;
+}
+
+.get-location-button {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 10000;
+}
+
+.bookmark-from-bookmarlist {
+  margin-left: 1.7rem;
+  background-color: blanchedalmond;
+  border-radius: 10px;
+  margin-top: 20px;
+  /* border: 1px solid wheat; */
+  height: 40px;
+  display: grid;
+
+  grid-template-columns: 10% 30% 45% 15%;
+  width: 40vw;
+  text-decoration: none;
+  align-items: center;
+  padding-left: 0.8rem;
+}
+
+.trash {
+  color: rgba(247, 74, 6, 0.959);
+  /* height: 1.5rem; */
+  /* width: 1.5rem; */
+  background-color: rgb(245, 204, 151);
+  margin-right: 2rem;
+  border-radius: 20px;
+}
+.trash:hover {
+  background-color: rgb(236, 168, 78);
+}
+.single-bookmark {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  color: rgb(42, 165, 48);
+}
+
+.form-page {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+}
+.form-page h2 {
+  font-size: 1.8rem;
+  /* color: #333; */
+  margin-bottom: 1rem;
+}
+.form-page .form {
+  margin-top: 1rem;
+  width: 40vw;
+  /* max-width: 500px; */
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* تنظیمات گروه فیلدهای ورودی */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.label {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 0.3rem;
+}
+
+.input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #007acc;
+  box-shadow: 0 0 5px rgba(0, 122, 204, 0.3);
+}
+
+/* تنظیمات گروه دکمه‌ها */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.btn-back {
+  background-color: #ddd;
+  color: #333;
+}
+
+.btn-back:hover {
+  background-color: #ccc;
+}
+
+.btn-add {
+  background-color: #007acc;
+  color: white;
+}
+
+.btn-add:hover {
+  background-color: #005fa3;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 2.5rem;
+  max-width: 25rem;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: rgb(202, 42, 103); */
+  background-color: #daf5e3;
+  color: #033050;
+  /* border: 1px solid wheat; */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(204, 0, 112, 0.8);
+  /* padding: 1rem; */
+}
+.form-login h2 {
+  padding: 1rem;
+}
+
+.form-group-login {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.btn-login {
+  /* display: flex; */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* padding-left: 1rem;
+  padding-right: 1rem; */
+  margin-top: 1rem;
+  background-color: #5db364;
+}
+.logout {
+  cursor: pointer;
+  background-color: rgb(141, 1, 1);
+  border-radius: 7px;
+  padding: 0.1rem;
+}
