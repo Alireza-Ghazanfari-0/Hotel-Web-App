@@ -5,7 +5,8 @@ import Loader from "./Loader";
 
 function HomeBody() {
   // console.log(useFetch("http://localhost:8000/hotels"));
-  const { data, isLoading } = useFetch("http://localhost:8000/hotels");
+  // const { data, isLoading } = useFetch("http://localhost:8000/hotels");
+  const { data, isLoading } = useFetch("https://json-server-repo-for-hotel-app.onrender.com/hotels");
   if (isLoading) <Loader />;
   // console.log(data);
 
